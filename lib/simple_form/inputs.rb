@@ -11,16 +11,17 @@ module SimpleForm
     autoload :CollectionRadioButtonsInput
     autoload :CollectionSelectInput
     autoload :ColorInput
+    autoload :CountryInput
     autoload :DateTimeInput
     autoload :FileInput
     autoload :GroupedCollectionSelectInput
     autoload :HiddenInput
     autoload :NumericInput
     autoload :PasswordInput
-    autoload :PriorityInput
     autoload :RangeInput
     autoload :RichTextAreaInput
     autoload :StringInput
     autoload :TextInput
+    autoload :TimeZoneInput
   end
 end

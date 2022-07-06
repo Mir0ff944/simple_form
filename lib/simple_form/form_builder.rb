@@ -30,7 +30,8 @@ module SimpleForm
     map_type :select,                                              to: SimpleForm::Inputs::CollectionSelectInput
     map_type :grouped_select,                                      to: SimpleForm::Inputs::GroupedCollectionSelectInput
     map_type :date, :time, :datetime,                              to: SimpleForm::Inputs::DateTimeInput
-    map_type :country, :time_zone,                                 to: SimpleForm::Inputs::PriorityInput
+    map_type :country,                                             to: SimpleForm::Inputs::CountryInput
+    map_type :time_zone,                                           to: SimpleForm::Inputs::TimeZoneInput
     map_type :boolean,                                             to: SimpleForm::Inputs::BooleanInput
     map_type :hidden,                                              to: SimpleForm::Inputs::HiddenInput
 

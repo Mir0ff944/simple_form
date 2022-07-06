@@ -1,16 +1,18 @@
 # frozen_string_literal: true
 module SimpleForm
   module Inputs
-    class PriorityInput < CollectionSelectInput
+    class CountryInput < CollectionSelectInput
       def input(wrapper_options = nil)
         merged_input_options = merge_wrapper_options(input_html_options, wrapper_options)
 
-        @builder.send(:"#{input_type}_select", attribute_name, input_priority,
-                      input_options, merged_input_options)
+        @builder.send(:country_select,
+                      attribute_name,
+                      input_options.merge(priority_countries: input_priority),
+                      merged_input_options)
       end
 
       def input_priority
-        options[:priority] || SimpleForm.send(:"#{input_type}_priority")
+        options[:priority] || SimpleForm.send(:country_priority)
       end
 
       protected
